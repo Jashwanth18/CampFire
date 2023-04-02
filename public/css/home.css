@@ -1,0 +1,33 @@
+body{
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://images.unsplash.com/photo-1654361890360-50e52349346c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1973&q=80");
+  background-size: cover;
+  background-position: center;
+}
+.navbar-brand:hover{
+  color: white;
+}
+.nav-link{
+  font-weight:700;
+  color: white;
+  border-bottom: 0.25rem solid transparent;
+}
+.navbar-brand{
+  font-weight: 700;
+  color: white;
+}
+.nav-link:hover{
+  color: #609966;
+  border-bottom-color: #609966;
+}
+.main{
+  margin: auto;
+}
+/* .cover-contaianer{
+  max-width: 60vw;
+} */
+.home-button{
+  text-decoration: none;
+  color: white;
+}
