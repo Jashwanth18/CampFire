@@ -78,18 +78,6 @@ const sessionConfig = {
   }
 }
 
-
-app.get('/makeCampground', catchAsync(async (req, res, next) => {
-  const ground = new Campground({
-    title: "megahills",
-    price: "18",
-    description: "good",
-    location: "Miyapur"
-  })
-  await ground.save();
-  res.send(ground);
-}))
-
 app.use(session(sessionConfig));
 app.use(flash());
 
