@@ -18,9 +18,9 @@ const scrollTop = function () {
   const scrollWindow = function () {
     if (window.scrollY != 0) {
       window.scrollTo(0, 0);
-      scrollWindow();
     }
   };
   scrollBtn.addEventListener("click", scrollWindow);
 };
+
 scrollTop();
