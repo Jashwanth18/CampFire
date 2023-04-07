@@ -2,29 +2,29 @@
 <div id="cluster-map"></div>
 <h1 class="mb-3">All campgrounds!</h1>
 
-<% for(let campground of campgrounds){ %>
-<div class="card mb-3">
-  <div class="row">
-    <div class="col-md-4">
-      <% if(campground.images.length){%>
-      <img class="img-fluid" src="<%=campground.images[0].url%>" alt="">
-      <% } else{ %>
-        <img class="img-fluid" src="https://res.cloudinary.com/dniu6qfly/image/upload/v1680138388/CampFire/zf3lecpfv9bhjkmvovny.jpg" alt="">
-        <% } %>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"><%=campground.title%></h5>
-        <p class="card-text"><%=campground.description.substring(0,177)%>...</p>
-        <p class="card-text">
-          <small class="text-muted text-primary-emphasis"><%=campground.location%></small>
-        </p>
-        <a class="btn btn-dark" href="/campgrounds/<%=campground._id%>">View Details</a>
+<% for(let i = campgrounds.length-1; i >= 0; i--){ %>
+  <div class="card mb-3">
+    <div class="row">
+      <div class="col-md-4">
+        <% if(campgrounds[i].images.length){%>
+        <img class="img-fluid" src="<%=campgrounds[i].images[0].url%>" alt="">
+        <% } else{ %>
+          <img class="img-fluid" src="https://res.cloudinary.com/dniu6qfly/image/upload/v1680138388/CampFire/zf3lecpfv9bhjkmvovny.jpg" alt="">
+          <% } %>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"><%=campgrounds[i].title%></h5>
+          <p class="card-text"><%=campgrounds[i].description.substring(0,177)%>...</p>
+          <p class="card-text">
+            <small class="text-muted text-primary-emphasis"><%=campgrounds[i].location%></small>
+          </p>
+          <a class="btn btn-dark" href="/campgrounds/<%=campgrounds[i]._id%>">View Details</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<% } %>
+  <% } %>
 
 
 <script>
